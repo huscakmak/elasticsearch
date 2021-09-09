@@ -1,0 +1,83 @@
+{
+    "name": "matchory/elasticsearch",
+    "description": "The missing elasticsearch ORM for Laravel!",
+    "keywords": [
+        "php",
+        "caching",
+        "search-engine",
+        "elasticsearch",
+        "laravel",
+        "eloquent",
+        "orm",
+        "model",
+        "lumen",
+        "indexing",
+        "query-builder",
+        "scout"
+    ],
+    "license": "MIT",
+    "type": "package",
+    "homepage": "https://www.matchory.com",
+    "support": {
+        "issues": "https://github.com/matchory/elasticsearch/issues"
+    },
+    "authors": [
+        {
+            "name": "Moritz Friedrich",
+            "homepage": "https://www.moritzfriedrich.com",
+            "email": "moritz@matchory.com"
+        },
+        {
+            "name": "Basem Khirat",
+            "homepage": "http://basemkhirat.com",
+            "email": "basemkhirat@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Matchory\\Elasticsearch\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Matchory\\Elasticsearch\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=7.3|^8.0",
+        "ext-json": "*",
+        "elasticsearch/elasticsearch": "^7.11",
+        "illuminate/pagination": "*",
+        "illuminate/support": "*",
+        "monolog/monolog": "*",
+        "symfony/var-dumper": "*"
+    },
+    "require-dev": {
+        "illuminate/contracts": "^8.5",
+        "illuminate/database": "^8.5",
+        "laravel/scout": "^9.1",
+        "orchestra/testbench": "^6.9",
+        "phpunit/phpunit": "^9.3",
+        "vimeo/psalm": "^4.6"
+    },
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Matchory\\Elasticsearch\\ElasticsearchServiceProvider"
+            ],
+            "aliases": {
+                "ES": "Matchory\\Elasticsearch\\Facades\\ES"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "replace": {
+        "basemkhirat/elasticsearch": "*"
+    }
+}
