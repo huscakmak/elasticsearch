@@ -1,4 +1,4 @@
-[![Latest Stable Version](https://poser.pugx.org/Huslab/elasticsearch/v)](https://packagist.org/packages/Huslab/elasticsearch) [![Total Downloads](https://poser.pugx.org/Huslab/elasticsearch/downloads)](https://packagist.org/packages/Huslab/elasticsearch) [![Latest Unstable Version](https://poser.pugx.org/Huslab/elasticsearch/v/unstable)](https://packagist.org/packages/Huslab/elasticsearch) [![License](https://poser.pugx.org/Huslab/elasticsearch/license)](https://packagist.org/packages/Huslab/elasticsearch)
+[![Latest Stable Version](https://poser.pugx.org/huscakmak/elasticsearch/v)](https://packagist.org/packages/huscakmak/elasticsearch) [![Total Downloads](https://poser.pugx.org/huscakmak/elasticsearch/downloads)](https://packagist.org/packages/huscakmak/elasticsearch) [![Latest Unstable Version](https://poser.pugx.org/huscakmak/elasticsearch/v/unstable)](https://packagist.org/packages/huscakmak/elasticsearch) [![License](https://poser.pugx.org/huscakmak/elasticsearch/license)](https://packagist.org/packages/huscakmak/elasticsearch)
 
 Laravel Elasticsearch Integration
 =================================
@@ -78,7 +78,7 @@ If you're interested in contributing, please submit a PR or open an issue!
 Requirements
 ------------
 - PHP >= `7.3`  
-  See [Travis CI Builds](https://travis-ci.org/Huslab/elasticsearch).
+  See [Travis CI Builds](https://travis-ci.org/huscakmak/elasticsearch).
 - `laravel/laravel` >= 5.* or `laravel/lumen` >= 5.* or any other application using composer
 
 Installation
