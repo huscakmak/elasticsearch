@@ -7,7 +7,7 @@ namespace Huslab\Elasticsearch;
 use Elasticsearch\ClientBuilder as ElasticBuilder;
 use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Contracts\Foundation\Application;
+use \Laravel\Lumen\Application;
 use Illuminate\Log\Logger;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\ServiceProvider;
