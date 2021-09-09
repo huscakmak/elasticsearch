@@ -117,17 +117,16 @@ class UpdateIndexCommand extends Command
 
             // Create mapping for type from config file
             if (isset($config['mappings'])) {
-                foreach ($config['mappings'] as $type => $mapping) {
-                    $this->info(
-                        "Creating mapping for type: {$type} in index: {$index}"
-                    );
+                $this->info(
+                    "Creating mapping in index: {$index}"
+                );
 
-                    $client->indices()->putMapping([
-                        'index' => $index,
-                        'type' => $type,
-                        'body' => $mapping,
-                    ]);
-                }
+                // Create mapping for type from config file
+                $client->indices()->putMapping([
+                    'index' => $index,
+                    'body' => $config['mappings'],
+                    "include_type_name" => false,
+                ]);
             }
         }
     }
