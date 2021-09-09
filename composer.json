@@ -1,5 +1,5 @@
 {
-    "name": "matchory/elasticsearch",
+    "name": "huscakmak/elasticsearch",
     "description": "The missing elasticsearch ORM for Laravel!",
     "keywords": [
         "php",
@@ -22,6 +22,11 @@
         "issues": "https://github.com/matchory/elasticsearch/issues"
     },
     "authors": [
+        {
+            "name": "Hüseyin Çakmak",
+            "homepage": "https://www.linkedin.com/in/huseyincakmaktr/",
+            "email": "huseyin@4alabs.io"
+        },
         {
             "name": "Moritz Friedrich",
             "homepage": "https://www.moritzfriedrich.com",
