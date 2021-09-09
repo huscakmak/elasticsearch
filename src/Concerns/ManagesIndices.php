@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Concerns;
+namespace Huslab\Elasticsearch\Concerns;
 
-use Matchory\Elasticsearch\Index;
+use Huslab\Elasticsearch\Index;
 use RuntimeException;
 
 trait ManagesIndices

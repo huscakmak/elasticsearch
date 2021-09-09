@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch;
+namespace Huslab\Elasticsearch;
 
 use Elasticsearch\ClientBuilder as ElasticBuilder;
 use Illuminate\Contracts\Container\BindingResolutionException;
@@ -14,15 +14,15 @@ use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
 use Laravel\Scout\EngineManager;
 use LogicException;
-use Matchory\Elasticsearch\Commands\CreateIndexCommand;
-use Matchory\Elasticsearch\Commands\DropIndexCommand;
-use Matchory\Elasticsearch\Commands\ListIndicesCommand;
-use Matchory\Elasticsearch\Commands\ReindexCommand;
-use Matchory\Elasticsearch\Commands\UpdateIndexCommand;
-use Matchory\Elasticsearch\Factories\ClientFactory;
-use Matchory\Elasticsearch\Interfaces\ClientFactoryInterface;
-use Matchory\Elasticsearch\Interfaces\ConnectionInterface;
-use Matchory\Elasticsearch\Interfaces\ConnectionResolverInterface;
+use Huslab\Elasticsearch\Commands\CreateIndexCommand;
+use Huslab\Elasticsearch\Commands\DropIndexCommand;
+use Huslab\Elasticsearch\Commands\ListIndicesCommand;
+use Huslab\Elasticsearch\Commands\ReindexCommand;
+use Huslab\Elasticsearch\Commands\UpdateIndexCommand;
+use Huslab\Elasticsearch\Factories\ClientFactory;
+use Huslab\Elasticsearch\Interfaces\ClientFactoryInterface;
+use Huslab\Elasticsearch\Interfaces\ConnectionInterface;
+use Huslab\Elasticsearch\Interfaces\ConnectionResolverInterface;
 use Psr\SimpleCache\CacheInterface;
 
 use function class_exists;
@@ -33,7 +33,7 @@ use function version_compare;
 /**
  * Class ElasticsearchServiceProvider
  *
- * @package Matchory\Elasticsearch
+ * @package Huslab\Elasticsearch
  */
 class ElasticsearchServiceProvider extends ServiceProvider
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Exceptions;
+namespace Huslab\Elasticsearch\Exceptions;
 
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Arr;
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 use function count;
 use function implode;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Concerns;
+namespace Huslab\Elasticsearch\Concerns;
 
 trait ExplainsQueries
 {

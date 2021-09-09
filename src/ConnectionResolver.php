@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch;
+namespace Huslab\Elasticsearch;
 
-use Matchory\Elasticsearch\Interfaces\ConnectionInterface;
-use Matchory\Elasticsearch\Interfaces\ConnectionResolverInterface;
+use Huslab\Elasticsearch\Interfaces\ConnectionInterface;
+use Huslab\Elasticsearch\Interfaces\ConnectionResolverInterface;
 
 use function is_null;
 
@@ -14,7 +14,7 @@ use function is_null;
  * ===================
  * Simple resolver intended for ad-hoc implementations and tests
  *
- * @package Matchory\Elasticsearch
+ * @package Huslab\Elasticsearch
  */
 class ConnectionResolver implements ConnectionResolverInterface
 {

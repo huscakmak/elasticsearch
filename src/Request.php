@@ -1,13 +1,13 @@
 <?php
 
-namespace Matchory\Elasticsearch;
+namespace Huslab\Elasticsearch;
 
 /**
  * Class Request
  *
  * TODO: Scrap this.
  *
- * @package Matchory\Elasticsearch
+ * @package Huslab\Elasticsearch
  */
 class Request
 {

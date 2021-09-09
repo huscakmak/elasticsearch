@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Concerns;
+namespace Huslab\Elasticsearch\Concerns;
 
-use Matchory\Elasticsearch\Classes\Search;
-use Matchory\Elasticsearch\Model;
-use Matchory\Elasticsearch\Query;
+use Huslab\Elasticsearch\Classes\Search;
+use Huslab\Elasticsearch\Model;
+use Huslab\Elasticsearch\Query;
 use stdClass;
 
 use function array_filter;

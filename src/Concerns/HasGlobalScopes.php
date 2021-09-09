@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Concerns;
+namespace Huslab\Elasticsearch\Concerns;
 
 use Closure;
 use InvalidArgumentException;
-use Matchory\Elasticsearch\Interfaces\ScopeInterface;
+use Huslab\Elasticsearch\Interfaces\ScopeInterface;
 
 use function get_class;
 use function is_null;
@@ -20,7 +20,7 @@ use function spl_object_hash;
  * is built similar to the Eloquent trait, but makes use of the Elasticsearch
  * query builder.
  *
- * @package Matchory\Elasticsearch\Concerns
+ * @package Huslab\Elasticsearch\Concerns
  * @see     \Illuminate\Database\Eloquent\Concerns\HasGlobalScopes
  */
 trait HasGlobalScopes

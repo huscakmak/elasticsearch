@@ -3,10 +3,10 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Tests\Factories;
+namespace Huslab\Elasticsearch\Tests\Factories;
 
 use Elasticsearch\Client;
-use Matchory\Elasticsearch\Factories\ClientFactory;
+use Huslab\Elasticsearch\Factories\ClientFactory;
 use PHPUnit\Framework\TestCase;
 
 class ClientFactoryTest extends TestCase

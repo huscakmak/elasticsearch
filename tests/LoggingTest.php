@@ -8,10 +8,10 @@
  * Time: 19:58
  */
 
-namespace Matchory\Elasticsearch\Tests;
+namespace Huslab\Elasticsearch\Tests;
 
 use Elasticsearch\ClientBuilder;
-use Matchory\Elasticsearch\Connection;
+use Huslab\Elasticsearch\Connection;
 use PHPUnit\Framework\TestCase;
 
 class LoggingTest extends TestCase

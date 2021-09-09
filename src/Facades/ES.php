@@ -1,14 +1,14 @@
 <?php
 
-namespace Matchory\Elasticsearch\Facades;
+namespace Huslab\Elasticsearch\Facades;
 
 use Illuminate\Support\Facades\Facade;
-use Matchory\Elasticsearch\Collection;
-use Matchory\Elasticsearch\Interfaces\ConnectionInterface;
-use Matchory\Elasticsearch\Interfaces\ConnectionResolverInterface;
-use Matchory\Elasticsearch\Model;
-use Matchory\Elasticsearch\Pagination;
-use Matchory\Elasticsearch\Query;
+use Huslab\Elasticsearch\Collection;
+use Huslab\Elasticsearch\Interfaces\ConnectionInterface;
+use Huslab\Elasticsearch\Interfaces\ConnectionResolverInterface;
+use Huslab\Elasticsearch\Model;
+use Huslab\Elasticsearch\Pagination;
+use Huslab\Elasticsearch\Query;
 
 /**
  * Elasticsearch Facade
@@ -72,7 +72,7 @@ use Matchory\Elasticsearch\Query;
  * @method static array createIndex(string $name, ?callable $callback = null)
  * @method static array dropIndex(string $name)
  *
- * @package Matchory\Elasticsearch\Facades
+ * @package Huslab\Elasticsearch\Facades
  */
 class ES extends Facade
 {

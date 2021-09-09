@@ -3,11 +3,11 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Tests;
+namespace Huslab\Elasticsearch\Tests;
 
-use Matchory\Elasticsearch\Connection;
-use Matchory\Elasticsearch\ConnectionResolver;
-use Matchory\Elasticsearch\Factories\ClientFactory;
+use Huslab\Elasticsearch\Connection;
+use Huslab\Elasticsearch\ConnectionResolver;
+use Huslab\Elasticsearch\Factories\ClientFactory;
 use PHPUnit\Framework\TestCase;
 
 class ConnectionResolverTest extends TestCase

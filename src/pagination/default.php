@@ -4,7 +4,7 @@
  * @var string[][] $elements
  */
 
-use Matchory\Elasticsearch\Pagination;
+use Huslab\Elasticsearch\Pagination;
 
 ?>
 <?php if ($paginator->hasPages()): ?>

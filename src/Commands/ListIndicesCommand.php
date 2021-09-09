@@ -1,11 +1,11 @@
 <?php
 
-namespace Matchory\Elasticsearch\Commands;
+namespace Huslab\Elasticsearch\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Arr;
 use InvalidArgumentException;
-use Matchory\Elasticsearch\Connection;
+use Huslab\Elasticsearch\Connection;
 use RuntimeException;
 
 use function app;
@@ -19,7 +19,7 @@ use function trim;
 /**
  * Class ListIndicesCommand
  *
- * @package Matchory\Elasticsearch\Commands
+ * @package Huslab\Elasticsearch\Commands
  */
 class ListIndicesCommand extends Command
 {

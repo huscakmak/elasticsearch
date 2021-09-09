@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Tests\Traits;
+namespace Huslab\Elasticsearch\Tests\Traits;
 
 use Elasticsearch\Client;
 use Illuminate\Foundation\Application;
-use Matchory\Elasticsearch\Connection;
-use Matchory\Elasticsearch\ConnectionResolver;
-use Matchory\Elasticsearch\Interfaces\ConnectionResolverInterface;
+use Huslab\Elasticsearch\Connection;
+use Huslab\Elasticsearch\ConnectionResolver;
+use Huslab\Elasticsearch\Interfaces\ConnectionResolverInterface;
 use PHPUnit\Framework\InvalidArgumentException;
 use PHPUnit\Framework\MockObject\ClassAlreadyExistsException;
 use PHPUnit\Framework\MockObject\ClassIsFinalException;

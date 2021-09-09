@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Interfaces;
+namespace Huslab\Elasticsearch\Interfaces;
 
 use Elasticsearch\Client;
-use Matchory\Elasticsearch\Query;
+use Huslab\Elasticsearch\Query;
 use Psr\SimpleCache\CacheInterface;
 
 /**
  * Interface ConnectionInterface
  *
- * @package Matchory\Elasticsearch\Interfaces
+ * @package Huslab\Elasticsearch\Interfaces
  */
 interface ConnectionInterface
 {

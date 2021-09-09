@@ -1,13 +1,13 @@
 <?php
 
-namespace Matchory\Elasticsearch\Classes;
+namespace Huslab\Elasticsearch\Classes;
 
-use Matchory\Elasticsearch\Query;
+use Huslab\Elasticsearch\Query;
 
 /**
  * Class Bulk
  *
- * @package Matchory\Elasticsearch\Classes
+ * @package Huslab\Elasticsearch\Classes
  */
 class Bulk
 {

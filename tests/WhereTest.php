@@ -1,9 +1,9 @@
 <?php
 /** @noinspection PhpUnhandledExceptionInspection */
 
-namespace Matchory\Elasticsearch\Tests;
+namespace Huslab\Elasticsearch\Tests;
 
-use Matchory\Elasticsearch\Tests\Traits\ESQueryTrait;
+use Huslab\Elasticsearch\Tests\Traits\ESQueryTrait;
 use PHPUnit\Framework\ExpectationFailedException;
 use PHPUnit\Framework\TestCase;
 use SebastianBergmann\RecursionContext\InvalidArgumentException;

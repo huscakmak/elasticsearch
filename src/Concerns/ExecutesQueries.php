@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Concerns;
+namespace Huslab\Elasticsearch\Concerns;
 
 use DateTime;
 use JsonException;
-use Matchory\Elasticsearch\Classes\Bulk;
-use Matchory\Elasticsearch\Collection;
-use Matchory\Elasticsearch\Exceptions\DocumentNotFoundException;
-use Matchory\Elasticsearch\Model;
-use Matchory\Elasticsearch\Pagination;
-use Matchory\Elasticsearch\Query;
-use Matchory\Elasticsearch\Request;
+use Huslab\Elasticsearch\Classes\Bulk;
+use Huslab\Elasticsearch\Collection;
+use Huslab\Elasticsearch\Exceptions\DocumentNotFoundException;
+use Huslab\Elasticsearch\Model;
+use Huslab\Elasticsearch\Pagination;
+use Huslab\Elasticsearch\Query;
+use Huslab\Elasticsearch\Request;
 use Psr\SimpleCache\CacheInterface;
 use Psr\SimpleCache\InvalidArgumentException;
 use Throwable;

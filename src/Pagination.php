@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch;
+namespace Huslab\Elasticsearch;
 
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Pagination\LengthAwarePaginator;
@@ -14,7 +14,7 @@ use const EXTR_OVERWRITE;
  * Pagination
  *
  * @mixin Collection
- * @package Matchory\Elasticsearch
+ * @package Huslab\Elasticsearch
  */
 class Pagination extends LengthAwarePaginator
 {

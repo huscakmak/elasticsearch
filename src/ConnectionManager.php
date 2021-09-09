@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch;
+namespace Huslab\Elasticsearch;
 
 use InvalidArgumentException;
-use Matchory\Elasticsearch\Interfaces\ClientFactoryInterface;
-use Matchory\Elasticsearch\Interfaces\ConnectionInterface;
-use Matchory\Elasticsearch\Interfaces\ConnectionResolverInterface;
+use Huslab\Elasticsearch\Interfaces\ClientFactoryInterface;
+use Huslab\Elasticsearch\Interfaces\ConnectionInterface;
+use Huslab\Elasticsearch\Interfaces\ConnectionResolverInterface;
 use Psr\Log\LoggerInterface;
 use Psr\SimpleCache\CacheInterface;
 
@@ -19,7 +19,7 @@ use function is_null;
  * Resolver intended to manage connections to one or more Elasticsearch servers
  * at runtime. It creates connections lazily as requested by the application.
  *
- * @package Matchory\Elasticsearch
+ * @package Huslab\Elasticsearch
  */
 class ConnectionManager implements ConnectionResolverInterface
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Interfaces;
+namespace Huslab\Elasticsearch\Interfaces;
 
-use Matchory\Elasticsearch\Model;
-use Matchory\Elasticsearch\Query;
+use Huslab\Elasticsearch\Model;
+use Huslab\Elasticsearch\Query;
 
 interface ScopeInterface
 {

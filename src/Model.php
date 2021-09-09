@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch;
+namespace Huslab\Elasticsearch;
 
 use ArrayAccess;
 use BadMethodCallException;
@@ -22,10 +22,10 @@ use Illuminate\Support\Collection as BaseCollection;
 use Illuminate\Support\Traits\ForwardsCalls;
 use JsonException;
 use JsonSerializable;
-use Matchory\Elasticsearch\Concerns\HasGlobalScopes;
-use Matchory\Elasticsearch\Exceptions\DocumentNotFoundException;
-use Matchory\Elasticsearch\Interfaces\ConnectionInterface as Connection;
-use Matchory\Elasticsearch\Interfaces\ConnectionResolverInterface as Resolver;
+use Huslab\Elasticsearch\Concerns\HasGlobalScopes;
+use Huslab\Elasticsearch\Exceptions\DocumentNotFoundException;
+use Huslab\Elasticsearch\Interfaces\ConnectionInterface as Connection;
+use Huslab\Elasticsearch\Interfaces\ConnectionResolverInterface as Resolver;
 
 use function array_key_exists;
 use function array_merge;
@@ -57,7 +57,7 @@ use const DATE_ATOM;
  * @property-read float|null  _score
  * @property-read array|null  _highlight
  *
- * @package Matchory\Elasticsearch
+ * @package Huslab\Elasticsearch
  */
 class Model implements Arrayable,
                        ArrayAccess,

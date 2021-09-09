@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch;
+namespace Huslab\Elasticsearch;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Collection as BaseCollection;
@@ -16,7 +16,7 @@ use function json_encode;
 /**
  * Collection
  *
- * @package Matchory\Elasticsearch
+ * @package Huslab\Elasticsearch
  */
 class Collection extends BaseCollection
 {

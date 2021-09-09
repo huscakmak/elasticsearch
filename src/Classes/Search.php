@@ -1,15 +1,15 @@
 <?php
 
-namespace Matchory\Elasticsearch\Classes;
+namespace Huslab\Elasticsearch\Classes;
 
-use Matchory\Elasticsearch\Query;
+use Huslab\Elasticsearch\Query;
 
 use function is_callable;
 
 /**
  * Class Search
  *
- * @package Matchory\Elasticsearch\Classes
+ * @package Huslab\Elasticsearch\Classes
  */
 class Search
 {

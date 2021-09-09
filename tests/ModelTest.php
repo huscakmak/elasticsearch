@@ -5,7 +5,7 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Tests;
+namespace Huslab\Elasticsearch\Tests;
 
 use ArrayAccess;
 use Illuminate\Contracts\Queue\QueueableEntity;
@@ -13,10 +13,10 @@ use Illuminate\Contracts\Routing\UrlRoutable;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Jsonable;
 use JsonSerializable;
-use Matchory\Elasticsearch\ElasticsearchServiceProvider;
-use Matchory\Elasticsearch\Interfaces\ConnectionResolverInterface;
-use Matchory\Elasticsearch\Model;
-use Matchory\Elasticsearch\Tests\Traits\ResolvesConnections;
+use Huslab\Elasticsearch\ElasticsearchServiceProvider;
+use Huslab\Elasticsearch\Interfaces\ConnectionResolverInterface;
+use Huslab\Elasticsearch\Model;
+use Huslab\Elasticsearch\Tests\Traits\ResolvesConnections;
 use Orchestra\Testbench\TestCase;
 
 class ModelTest extends TestCase

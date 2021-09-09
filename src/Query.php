@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch;
+namespace Huslab\Elasticsearch;
 
 use ArrayIterator;
 use BadMethodCallException;
@@ -13,12 +13,12 @@ use Illuminate\Support\Traits\ForwardsCalls;
 use IteratorAggregate;
 use JsonException;
 use JsonSerializable;
-use Matchory\Elasticsearch\Concerns\AppliesScopes;
-use Matchory\Elasticsearch\Concerns\BuildsFluentQueries;
-use Matchory\Elasticsearch\Concerns\ExecutesQueries;
-use Matchory\Elasticsearch\Concerns\ExplainsQueries;
-use Matchory\Elasticsearch\Concerns\ManagesIndices;
-use Matchory\Elasticsearch\Interfaces\ConnectionInterface;
+use Huslab\Elasticsearch\Concerns\AppliesScopes;
+use Huslab\Elasticsearch\Concerns\BuildsFluentQueries;
+use Huslab\Elasticsearch\Concerns\ExecutesQueries;
+use Huslab\Elasticsearch\Concerns\ExplainsQueries;
+use Huslab\Elasticsearch\Concerns\ManagesIndices;
+use Huslab\Elasticsearch\Interfaces\ConnectionInterface;
 
 use function count;
 use function json_encode;
@@ -30,7 +30,7 @@ use const JSON_THROW_ON_ERROR;
  * =====
  * Query builder instance for Elasticsearch queries
  *
- * @package Matchory\Elasticsearch\Query
+ * @package Huslab\Elasticsearch\Query
  * @todo    Rename to "Builder" for coherency with Eloquent. To avoid breaking
  *          changes, an alias should be registered for Query
  */

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch;
+namespace Huslab\Elasticsearch;
 
 use BadMethodCallException;
 use Elasticsearch\Client;
@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Traits\ForwardsCalls;
 use InvalidArgumentException;
-use Matchory\Elasticsearch\Interfaces\ClientFactoryInterface;
-use Matchory\Elasticsearch\Interfaces\ConnectionInterface;
-use Matchory\Elasticsearch\Interfaces\ConnectionResolverInterface as Resolver;
+use Huslab\Elasticsearch\Interfaces\ClientFactoryInterface;
+use Huslab\Elasticsearch\Interfaces\ConnectionInterface;
+use Huslab\Elasticsearch\Interfaces\ConnectionResolverInterface as Resolver;
 use Monolog\Handler\StreamHandler;
 use Monolog\Logger;
 use Psr\SimpleCache\CacheInterface;
@@ -25,7 +25,7 @@ use Psr\SimpleCache\CacheInterface;
  * Connection
  * ==========
  *
- * @package Matchory\Elasticsearch
+ * @package Huslab\Elasticsearch
  */
 class Connection implements ConnectionInterface
 {

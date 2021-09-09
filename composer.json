@@ -17,9 +17,8 @@
     ],
     "license": "MIT",
     "type": "package",
-    "homepage": "https://www.matchory.com",
     "support": {
-        "issues": "https://github.com/matchory/elasticsearch/issues"
+        "issues": "https://github.com/huscakmak/elasticsearch/issues"
     },
     "authors": [
         {
@@ -30,7 +29,7 @@
         {
             "name": "Moritz Friedrich",
             "homepage": "https://www.moritzfriedrich.com",
-            "email": "moritz@matchory.com"
+            "email": "moritz@Huslab.com"
         },
         {
             "name": "Basem Khirat",
@@ -40,7 +39,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Matchory\\Elasticsearch\\": "src/"
+            "Huslab\\Elasticsearch\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -48,7 +47,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Matchory\\Elasticsearch\\Tests\\": "tests/"
+            "Huslab\\Elasticsearch\\Tests\\": "tests/"
         }
     },
     "require": {
@@ -72,10 +71,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Matchory\\Elasticsearch\\ElasticsearchServiceProvider"
+                "Huslab\\Elasticsearch\\ElasticsearchServiceProvider"
             ],
             "aliases": {
-                "ES": "Matchory\\Elasticsearch\\Facades\\ES"
+                "ES": "Huslab\\Elasticsearch\\Facades\\ES"
             }
         }
     },

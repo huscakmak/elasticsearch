@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Factories;
+namespace Huslab\Elasticsearch\Factories;
 
 use Elasticsearch\Client;
 use Elasticsearch\ClientBuilder;
 use Elasticsearch\Common\Exceptions\InvalidArgumentException;
-use Matchory\Elasticsearch\Interfaces\ClientFactoryInterface;
+use Huslab\Elasticsearch\Interfaces\ClientFactoryInterface;
 use Psr\Log\LoggerInterface;
 
 class ClientFactory implements ClientFactoryInterface

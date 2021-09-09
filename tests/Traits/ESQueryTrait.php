@@ -1,11 +1,11 @@
 <?php
 /** @noinspection PhpUnhandledExceptionInspection */
 
-namespace Matchory\Elasticsearch\Tests\Traits;
+namespace Huslab\Elasticsearch\Tests\Traits;
 
 use Elasticsearch\Client;
-use Matchory\Elasticsearch\Connection;
-use Matchory\Elasticsearch\Query;
+use Huslab\Elasticsearch\Connection;
+use Huslab\Elasticsearch\Query;
 use PHPUnit\Framework\InvalidArgumentException;
 use PHPUnit\Framework\MockObject\ClassAlreadyExistsException;
 use PHPUnit\Framework\MockObject\ClassIsFinalException;

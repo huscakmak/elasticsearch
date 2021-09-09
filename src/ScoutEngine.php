@@ -1,6 +1,6 @@
 <?php
 
-namespace Matchory\Elasticsearch;
+namespace Huslab\Elasticsearch;
 
 use Elasticsearch\Client as Elastic;
 use Illuminate\Database\Eloquent\Collection;

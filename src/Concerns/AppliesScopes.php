@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Concerns;
+namespace Huslab\Elasticsearch\Concerns;
 
 use Closure;
 use Illuminate\Support\Arr;
-use Matchory\Elasticsearch\Interfaces\ScopeInterface;
-use Matchory\Elasticsearch\Query;
+use Huslab\Elasticsearch\Interfaces\ScopeInterface;
+use Huslab\Elasticsearch\Query;
 
 use function array_keys;
 use function array_unshift;

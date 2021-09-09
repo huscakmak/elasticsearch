@@ -3,14 +3,14 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Tests;
+namespace Huslab\Elasticsearch\Tests;
 
 use Elasticsearch\Client;
-use Matchory\Elasticsearch\Connection;
-use Matchory\Elasticsearch\ConnectionManager;
-use Matchory\Elasticsearch\Factories\ClientFactory;
-use Matchory\Elasticsearch\Interfaces\ConnectionInterface;
-use Matchory\Elasticsearch\Interfaces\ConnectionResolverInterface;
+use Huslab\Elasticsearch\Connection;
+use Huslab\Elasticsearch\ConnectionManager;
+use Huslab\Elasticsearch\Factories\ClientFactory;
+use Huslab\Elasticsearch\Interfaces\ConnectionInterface;
+use Huslab\Elasticsearch\Interfaces\ConnectionResolverInterface;
 use Mockery\Mock;
 use Orchestra\Testbench\TestCase;
 use PHPUnit\Framework\ExpectationFailedException;

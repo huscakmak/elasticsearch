@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch;
+namespace Huslab\Elasticsearch;
 
 use ArrayObject;
 use Elasticsearch\Client;
-use Matchory\Elasticsearch\Interfaces\ConnectionInterface;
+use Huslab\Elasticsearch\Interfaces\ConnectionInterface;
 use TypeError;
 
 use function array_unique;
@@ -17,7 +17,7 @@ use function is_string;
 /**
  * Class Index
  *
- * @package Matchory\Elasticsearch\Query
+ * @package Huslab\Elasticsearch\Query
  */
 class Index
 {

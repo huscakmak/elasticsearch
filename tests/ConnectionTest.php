@@ -3,11 +3,11 @@
 
 declare(strict_types=1);
 
-namespace Matchory\Elasticsearch\Tests;
+namespace Huslab\Elasticsearch\Tests;
 
-use Matchory\Elasticsearch\ElasticsearchServiceProvider;
-use Matchory\Elasticsearch\Interfaces\ConnectionInterface;
-use Matchory\Elasticsearch\Tests\Traits\ResolvesConnections;
+use Huslab\Elasticsearch\ElasticsearchServiceProvider;
+use Huslab\Elasticsearch\Interfaces\ConnectionInterface;
+use Huslab\Elasticsearch\Tests\Traits\ResolvesConnections;
 use Orchestra\Testbench\TestCase;
 
 class ConnectionTest extends TestCase

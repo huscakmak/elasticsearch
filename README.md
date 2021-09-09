@@ -1,4 +1,4 @@
-[![Latest Stable Version](https://poser.pugx.org/matchory/elasticsearch/v)](https://packagist.org/packages/matchory/elasticsearch) [![Total Downloads](https://poser.pugx.org/matchory/elasticsearch/downloads)](https://packagist.org/packages/matchory/elasticsearch) [![Latest Unstable Version](https://poser.pugx.org/matchory/elasticsearch/v/unstable)](https://packagist.org/packages/matchory/elasticsearch) [![License](https://poser.pugx.org/matchory/elasticsearch/license)](https://packagist.org/packages/matchory/elasticsearch)
+[![Latest Stable Version](https://poser.pugx.org/Huslab/elasticsearch/v)](https://packagist.org/packages/Huslab/elasticsearch) [![Total Downloads](https://poser.pugx.org/Huslab/elasticsearch/downloads)](https://packagist.org/packages/Huslab/elasticsearch) [![Latest Unstable Version](https://poser.pugx.org/Huslab/elasticsearch/v/unstable)](https://packagist.org/packages/Huslab/elasticsearch) [![License](https://poser.pugx.org/Huslab/elasticsearch/license)](https://packagist.org/packages/Huslab/elasticsearch)
 
 Laravel Elasticsearch Integration
 =================================
@@ -78,7 +78,7 @@ If you're interested in contributing, please submit a PR or open an issue!
 Requirements
 ------------
 - PHP >= `7.3`  
-  See [Travis CI Builds](https://travis-ci.org/matchory/elasticsearch).
+  See [Travis CI Builds](https://travis-ci.org/Huslab/elasticsearch).
 - `laravel/laravel` >= 5.* or `laravel/lumen` >= 5.* or any other application using composer
 
 Installation
@@ -88,7 +88,7 @@ This section describes the installation process for all supported application ty
 ### Install package using composer
 Whether you're using Laravel, Lumen or another framework, start by installing the package using composer:
 ```bash
-composer require matchory/elasticsearch
+composer require Huslab/elasticsearch
 ```
 
 #### Laravel Installation
@@ -97,7 +97,7 @@ If you have package autodiscovery disabled, add the service provider and facade 
     'providers' => [
         // ...
 
-        Matchory\Elasticsearch\ElasticsearchServiceProvider::class,
+        Huslab\Elasticsearch\ElasticsearchServiceProvider::class,
 
         // ...
     ],
@@ -107,7 +107,7 @@ If you have package autodiscovery disabled, add the service provider and facade 
     'aliases' => [
         // ...
 
-        'ES' => Matchory\Elasticsearch\Facades\ES::class,
+        'ES' => Huslab\Elasticsearch\Facades\ES::class,
 
         // ...
     ],
@@ -115,18 +115,18 @@ If you have package autodiscovery disabled, add the service provider and facade 
 
 Lastly, publish the service provider to your configuration directory:
 ```bash
-php artisan vendor:publish --provider="Matchory\Elasticsearch\ElasticsearchServiceProvider"
+php artisan vendor:publish --provider="Huslab\Elasticsearch\ElasticsearchServiceProvider"
 ```
 
 #### Lumen Installation
 After installing the package from composer, add package service provider in `bootstrap/app.php`:
 ```php
-$app->register(Matchory\Elasticsearch\ElasticsearchServiceProvider::class);
+$app->register(Huslab\Elasticsearch\ElasticsearchServiceProvider::class);
 ```
 
-Copy the package config directory at `vendor/matchory/elasticsearch/src/config/` to your project root folder alongside with your `app/` directory:
+Copy the package config directory at `vendor/Huslab/elasticsearch/src/config/` to your project root folder alongside with your `app/` directory:
 ```bash
-cp -r ./vendor/matchory/elasticsearch/src/config ./config
+cp -r ./vendor/Huslab/elasticsearch/src/config ./config
 ```
 
 If you haven't already, make Lumen work with facades by uncommenting this line in `bootstrap/app.php`:
@@ -148,8 +148,8 @@ it works:
 ```php
 require "vendor/autoload.php";
 
-use Matchory\Elasticsearch\ConnectionManager;
-use Matchory\Elasticsearch\Factories\ClientFactory;
+use Huslab\Elasticsearch\ConnectionManager;
+use Huslab\Elasticsearch\Factories\ClientFactory;
 
 $connectionManager = new ConnectionManager([
  'servers' => [
@@ -355,7 +355,7 @@ A minimal model might look like this:
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class Post extends Model
 {
@@ -370,7 +370,7 @@ index, you may define an `index` property on the model:
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class Post extends Model
 {
@@ -385,7 +385,7 @@ that should be used when interacting with a particular model, you should define 
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class Post extends Model
 {
@@ -403,7 +403,7 @@ If you're still using mapping types, you may add a `type` property to your model
 ```php
 namespace App;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class Post extends Model
 {
@@ -418,7 +418,7 @@ attributes, you may define an `attributes` property on your model:
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class Post extends Model
 {
@@ -456,7 +456,7 @@ $posts = Post::where('status', 1)
 
 ### Collections
 As we have seen, Elasticsearch methods like `all` and `get` retrieve multiple documents from the index. However, these methods don't return a plain PHP array.
-Instead, an instance of [`Matchory\Elasticsearch\Collection`](./src/Collection.php) is returned.
+Instead, an instance of [`Huslab\Elasticsearch\Collection`](./src/Collection.php) is returned.
 
 The Elasticsearch `Collection` class extends Laravel's base `Illuminate\Support\Collection` class, which provides a
 [variety of helpful methods](https://laravel.com/docs/master/collections#available-methods) for interacting with data collections. For example, the `reject`
@@ -538,7 +538,7 @@ $model = Post::where('tags', '>', 3)->firstOr(function () {
 ### Not Found Exceptions
 Sometimes you may wish to throw an exception if a model is not found. This is particularly useful in routes or controllers. The `findOrFail` and `firstOrFail`
 methods will retrieve the first result of the query; however, if no result is found, a
-[`Matchory\Elasticsearch\Exceptions\DocumentNotFoundException`](./src/Exceptions/DocumentNotFoundException.php) will be thrown:
+[`Huslab\Elasticsearch\Exceptions\DocumentNotFoundException`](./src/Exceptions/DocumentNotFoundException.php) will be thrown:
 
 ```php
 $post = Post::findOrFail('AVp_tCaAoV7YQD3Esfmp');
@@ -718,7 +718,7 @@ example, let's make the `title` attribute of our `Post` model mass assignable:
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class Post extends Model
 {
@@ -802,7 +802,7 @@ every query for a given model receives certain constraints.
 
 ##### Writing Global Scopes
 Writing a global scope is simple. First, define a class that implements the
-[`Matchory\Elasticsearch\Interfaces\ScopeInterface`](./src/Interfaces/ScopeInterface.php) interface. Laravel does not have a conventional location that you
+[`Huslab\Elasticsearch\Interfaces\ScopeInterface`](./src/Interfaces/ScopeInterface.php) interface. Laravel does not have a conventional location that you
 should place scope classes, so you are free to place this class in any directory that you wish.
 
 The `ScopeInterface` requires you to implement one method: `apply`. The `apply` method may add constraints or other types of clauses to the query as needed:
@@ -810,17 +810,17 @@ The `ScopeInterface` requires you to implement one method: `apply`. The `apply` 
 ```php
 namespace App\Scopes;
 
-use Matchory\Elasticsearch\Query;
-use Matchory\Elasticsearch\Model;
-use Matchory\Elasticsearch\Interfaces\ScopeInterface;
+use Huslab\Elasticsearch\Query;
+use Huslab\Elasticsearch\Model;
+use Huslab\Elasticsearch\Interfaces\ScopeInterface;
 
 class AncientScope implements ScopeInterface
 {
     /**
      * Apply the scope to a given Elasticsearch query builder.
      *
-     * @param  \Matchory\Elasticsearch\Query  $query
-     * @param  \Matchory\Elasticsearch\Model  $model
+     * @param  \Huslab\Elasticsearch\Query  $query
+     * @param  \Huslab\Elasticsearch\Model  $model
      * @return void
      */
     public function apply(Query $query, Model $model)
@@ -838,7 +838,7 @@ accepts an instance of your scope as its only argument:
 namespace App\Models;
 
 use App\Scopes\AncientScope;
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class Post extends Model
 {
@@ -862,8 +862,8 @@ their own. When defining a global scope using a closure, you should provide a sc
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Query;
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Query;
+use Huslab\Elasticsearch\Model;
 
 class Post extends Model
 {
@@ -920,15 +920,15 @@ To define a scope, prefix an Elasticsearch model method with scope. Scopes shoul
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class Post extends Model
 {
     /**
      * Scope a query to only include popular posts.
      *
-     * @param  \Matchory\Elasticsearch\Query  $query
-     * @return \Matchory\Elasticsearch\Query
+     * @param  \Huslab\Elasticsearch\Query  $query
+     * @return \Huslab\Elasticsearch\Query
      */
     public function scopePopular(Query $query): Query
     {
@@ -938,8 +938,8 @@ class Post extends Model
     /**
      * Scope a query to only include published posts.
      *
-     * @param  \Matchory\Elasticsearch\Query  $query
-     * @return \Matchory\Elasticsearch\Query
+     * @param  \Huslab\Elasticsearch\Query  $query
+     * @return \Huslab\Elasticsearch\Query
      */
     public function scopePublished(Query $query): Query
     {
@@ -965,16 +965,16 @@ parameters should be defined after the `$query` parameter:
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class Post extends Model
 {
     /**
      * Scope a query to only include posts of a given type.
      *
-     * @param  \Matchory\Elasticsearch\Query  $query
+     * @param  \Huslab\Elasticsearch\Query  $query
      * @param  mixed  $type
-     * @return \Matchory\Elasticsearch\Query
+     * @return \Huslab\Elasticsearch\Query
      */
     public function scopeOfType(Query $query, $type): Query
     {
@@ -1014,7 +1014,7 @@ model via its constructor:
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 use App\Events\UserDeleted;
 use App\Events\UserSaved;
 
@@ -1041,7 +1041,7 @@ closures in the `booted` method of your model:
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class Post extends Model
 {
@@ -1080,7 +1080,7 @@ example, we'll define an accessor for the `title` attribute. The accessor will a
 
 namespace App;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class post extends Model
 {
@@ -1127,7 +1127,7 @@ define a mutator for the `title` attribute. This mutator will be automatically c
 ```php
 namespace App;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class post extends Model
 {
@@ -1220,7 +1220,7 @@ the value of the `first_name` attribute:
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class User extends Model
 {
@@ -1273,7 +1273,7 @@ on the model:
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class User extends Model
 {
@@ -1334,7 +1334,7 @@ To demonstrate attribute casting, let's cast the `is_admin` attribute, which is 
 ```php
 namespace App\Models;
 
-use Matchory\Elasticsearch\Model;
+use Huslab\Elasticsearch\Model;
 
 class User extends Model
 {
@@ -1429,7 +1429,7 @@ class Json implements CastsAttributes
     /**
      * Cast the given value.
      *
-     * @param  \Illuminate\Database\Eloquent\Model|\Matchory\Elasticsearch\Model  $model
+     * @param  \Illuminate\Database\Eloquent\Model|\Huslab\Elasticsearch\Model  $model
      * @param  string  $key
      * @param  mixed  $value
      * @param  array  $attributes
@@ -1443,7 +1443,7 @@ class Json implements CastsAttributes
     /**
      * Prepare the given value for storage.
      *
-     * @param  \Illuminate\Database\Eloquent\Model|\Matchory\Elasticsearch\Model  $model
+     * @param  \Illuminate\Database\Eloquent\Model|\Huslab\Elasticsearch\Model  $model
      * @param  string  $key
      * @param  array  $value
      * @param  array  $attributes
@@ -1462,7 +1462,7 @@ Once you have defined a custom cast type, you may attach it to a model attribute
     namespace App\Models;
 
     use App\Casts\Json;
-    use Matchory\Elasticsearch\Model;
+    use Huslab\Elasticsearch\Model;
 
     class User extends Model
     {
@@ -1496,7 +1496,7 @@ class Address implements CastsAttributes
     /**
      * Cast the given value.
      *
-     * @param  \Illuminate\Database\Eloquent\Model|\Matchory\Elasticsearch\Model  $model
+     * @param  \Illuminate\Database\Eloquent\Model|\Huslab\Elasticsearch\Model  $model
      * @param  string  $key
      * @param  mixed  $value
      * @param  array  $attributes
@@ -1513,7 +1513,7 @@ class Address implements CastsAttributes
     /**
      * Prepare the given value for storage.
      *
-     * @param  \Illuminate\Database\Eloquent\Model|\Matchory\Elasticsearch\Model  $model
+     * @param  \Illuminate\Database\Eloquent\Model|\Huslab\Elasticsearch\Model  $model
      * @param  string  $key
      * @param  \App\Models\Address  $value
      * @param  array  $attributes
@@ -1560,7 +1560,7 @@ which should return the serialized form of your value object:
 /**
  * Get the serialized representation of the value.
  *
- * @param  \Illuminate\Database\Eloquent\Model|\Matchory\Elasticsearch\Model  $model
+ * @param  \Illuminate\Database\Eloquent\Model|\Huslab\Elasticsearch\Model  $model
  * @param  string  $key
  * @param  mixed  $value
  * @param  array  $attributes
@@ -1606,7 +1606,7 @@ class Hash implements CastsInboundAttributes
     /**
      * Prepare the given value for storage.
      *
-     * @param  \Illuminate\Database\Eloquent\Model|\Matchory\Elasticsearch\Model  $model
+     * @param  \Illuminate\Database\Eloquent\Model|\Huslab\Elasticsearch\Model  $model
      * @param  string  $key
      * @param  array  $value
      * @param  array  $attributes
@@ -1872,7 +1872,7 @@ return the instance of the class that should be injected into the route:
  *
  * @param  mixed  $value
  * @param  string|null  $field
- * @return \Matchory\Elasticsearch\Model|null
+ * @return \Huslab\Elasticsearch\Model|null
  */
 public function resolveRouteBinding($value, ?string $field = null): ?self
 {
@@ -1889,7 +1889,7 @@ If a route is utilizing implicit binding scoping, the `resolveChildRouteBinding`
  * @param  string  $childType
  * @param  mixed  $value
  * @param  string|null  $field
- * @return \Matchory\Elasticsearch\Model|null
+ * @return \Huslab\Elasticsearch\Model|null
  */
 public function resolveChildRouteBinding(string $childType, $value, ?string $field): ?self
 {
@@ -1912,8 +1912,8 @@ ES::index('my_index')->create();
 
 ### Creating index with custom options (optional)
 ```php
-use Matchory\Elasticsearch\Facades\ES;
-use Matchory\Elasticsearch\Index;
+use Huslab\Elasticsearch\Facades\ES;
+use Huslab\Elasticsearch\Index;
 
 ES::index('my_index')->create(function(Index $index) {
     $index->shards(5)->replicas(1)->mapping([
@@ -2508,18 +2508,18 @@ ES::type("my_type")->bulk(function ($bulk){
 
 Releases
 --------
-See the [release page](https://github.com/matchory/elasticsearch/releases).
+See the [release page](https://github.com/Huslab/elasticsearch/releases).
 
 Authors
 -------
 [Basem Khirat](http://basemkhirat.com) - [basemkhirat@gmail.com](mailto:basemkhirat@gmail.com) - [@basemkhirat](https://twitter.com/basemkhirat)  
-[Moritz Friedrich](https://www.matchory.com) - [moritz@matchory.com](mailto:moritz@matchory.com)
+[Moritz Friedrich](https://www.Huslab.com) - [moritz@Huslab.com](mailto:moritz@Huslab.com)
 
 Bugs, Suggestions and Contributions
 -----------------------------------
 Thanks to [everyone](https://github.com/basemkhirat/elasticsearch/graphs/contributors) who has contributed to the original project and
-[everyone else](https://github.com/matchory/elasticsearch/graphs/contributors) who has contributed to this fork!  
-Please use [Github](https://github.com/matchory/elasticsearch) for reporting bugs, and making comments or suggestions.
+[everyone else](https://github.com/Huslab/elasticsearch/graphs/contributors) who has contributed to this fork!  
+Please use [Github](https://github.com/Huslab/elasticsearch) for reporting bugs, and making comments or suggestions.
 
 If you're interested in helping out, the most pressing issues would be modernizing the query builder to provide better support for Elasticsearch features as
 well as completing the test suite!
