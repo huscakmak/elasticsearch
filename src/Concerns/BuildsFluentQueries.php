@@ -7,6 +7,7 @@ namespace Huslab\Elasticsearch\Concerns;
 use Huslab\Elasticsearch\Classes\Search;
 use Huslab\Elasticsearch\Model;
 use Huslab\Elasticsearch\Query;
+use Illuminate\Support\Str;
 use stdClass;
 
 use function array_filter;
@@ -503,7 +504,13 @@ trait BuildsFluentQueries
                     return $this->id((string)$value);
                 }
 
-                $this->filter[] = ['term' => [$name => $value]];
+                $searchable = [$name => $value];
+
+                if(Str::of($name)->contains('.')){
+                    $searchable = array_undot($searchable);
+                }
+
+                $this->filter[] = ['term' => [$searchable]];
                 break;
 
             case Query::OPERATOR_GREATER_THAN:
@@ -523,7 +530,13 @@ trait BuildsFluentQueries
                 break;
 
             case Query::OPERATOR_LIKE:
-                $this->must[] = ['match' => [$name => $value]];
+                $searchable = [$name => $value];
+
+                if(Str::of($name)->contains('.')){
+                    $searchable = array_undot($searchable);
+                }
+
+                $this->must[] = ['match' => [$searchable]];
                 break;
 
             case Query::OPERATOR_EXISTS:
